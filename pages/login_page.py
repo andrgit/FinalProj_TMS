@@ -1,7 +1,7 @@
-from FinalProj1.constants import PASSWORD_LOGIN, USERNAME_LOGIN
-from FinalProj1.locators.login_page_locators import LoginPageLocators
-from FinalProj1.pages.admin_page import AdminPage
-from FinalProj1.pages.base_page import BasePage
+from constants import PASSWORD_LOGIN, USERNAME_LOGIN
+from locators.login_page_locators import LoginPageLocators
+from pages.admin_page import AdminPage
+from pages.base_page import BasePage
 
 
 class LoginPage(BasePage):
