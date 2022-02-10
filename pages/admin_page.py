@@ -1,5 +1,5 @@
-from FinalProj1.locators.admin_page_locators import AdminPageLocators
-from FinalProj1.pages.base_page import BasePage
+from locators.admin_page_locators import AdminPageLocators
+from pages.base_page import BasePage
 
 
 class AdminPage(BasePage):
