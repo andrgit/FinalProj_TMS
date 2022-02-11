@@ -10,9 +10,9 @@ def test_create_user():
     """
     new_user = {
         "id": 666,
-        "username": "Group_1",
-        "firstName": "Daria",
-        "lastName": "Andrei",
+        "username": "User_1",
+        "firstName": "Andrei",
+        "lastName": "Hlebko",
         "email": "tms@tut.by",
         "password": "1234567890",
         "phone": "987654321",
@@ -30,7 +30,7 @@ def test_login_user():
     """
     This test checks user login
     """
-    username = 'Group_1'
+    username = 'User_1'
     password = '1234567890'
     response = login_user(username, password)
     with allure.step('Send request. Check status code'):
@@ -44,12 +44,12 @@ def test_get_user_info():
     """
     This test checks user information
     """
-    username = 'Group_1'
+    username = 'User_1'
     response = get_user_info(username)
     with allure.step('Send request. Check status code'):
         assert response.status_code == 200, "Wrong status code"
     with allure.step('Check user information in response body'):
-        assert 'Daria' in response.text and 'Andrei' in response.text, "No such user information"
+        assert 'Andrei' in response.text and 'Hlebko' in response.text, "No such user information"
 
 
 @allure.story("User logout")
@@ -69,9 +69,11 @@ def test_del_user():
     """
     This test checks user delete
     """
-    username = 'Group_1'
+    username = 'User_1'
     response = del_user(username)
     with allure.step('Send request. Check status code'):
         assert response.status_code == 200, "Wrong status code"
     with allure.step('Check the name of deleted user in response body'):
-        assert 'Group_1' in response.text, "User wasn't delete"
+        assert 'User_1' in response.text, "User wasn't delete"
+        #assert f'{username}' in response.text, "User wasn't delete" #а так пишут?что бы не дублировать в ассерте юзернэйм
+
