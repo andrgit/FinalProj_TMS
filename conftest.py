@@ -10,7 +10,7 @@ from selenium import webdriver
 #     yield driver
 #     driver.quit()
 
-
+#Start on Mac (jenkins)
 @pytest.fixture(scope='session')
 def driver():
     chrome_options = webdriver.ChromeOptions()
