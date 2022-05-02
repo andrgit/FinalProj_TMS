@@ -1,4 +1,4 @@
-Final project TMS(QA Python) by Andrei Hlebko
+Final project TeachMeSkills (QA Python) by Andrei Hlebko
 
 Всем необходимо будет разработать фреймворк, который будет проверять написанные для вашей группы тест кейсы. Тесты должны быть разработаны на pytest, использую Page Objects, conftest. Дополнительные действия типа коннекта к БД можно делать в отдельном файле (хелперах) или в conftest. Запуск тестов должен происходить в Jenkins с формированием отчета в Allure.
 
